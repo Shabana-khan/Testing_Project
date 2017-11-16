@@ -21,6 +21,7 @@ public class SearchKeyTest{
 			}
 		}
 		
+		
 		//open web page
 		public void openWebPage(){
 			driver.get(et.CONFIG.getProperty("url"));
