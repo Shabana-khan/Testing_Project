@@ -86,6 +86,6 @@ public class ExecuteTest extends EnvironmentSetup {
 		}
 
 		// closing driver
-		// DRIVER.close();
+		DRIVER.close();
 	}
 }

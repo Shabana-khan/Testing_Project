@@ -330,8 +330,6 @@ public class APIs {
 			WebElement sellerContainer = driver.findElement(By.className(OR.getProperty("sellerContainer")));
 			String sellerName = sellerContainer.findElement(By.tagName("a")).getText();
 			clickBtn(testcase, object, type, value);
-			System.out.println(productName + " " + productPrice + " " + sellerName);
-			System.out.println(product.getProductName() + " " + product.getPrice() + " " + product.getSellerName());
 			if (productName.equals(product.getProductName()) && productPrice.equals(product.getPrice())
 					&& sellerName.equals(product.getSellerName())) {
 				return Constants.PASS;
@@ -347,8 +345,9 @@ public class APIs {
 		try {
 			checkPageTitle(testcase, object, type, value);
 			String productName = driver.findElement(By.className(OR.getProperty("finalProductLink"))).getText();
-			String price = driver.findElement(By.className(OR.getProperty("finalProductPrice"))).getText();
-			String totalPrice = driver.findElement(By.xpath(OR.getProperty("totalPrice"))).getText();
+			String price = "US " + driver.findElement(By.className(OR.getProperty("finalProductPrice"))).getText();
+			String totalPrice = "US " + driver.findElement(By.xpath(OR.getProperty("totalPrice"))).getText();
+
 			if (productName.equals(product.getProductName()) && price.equals(product.getPrice())
 					&& totalPrice.equals(product.getPrice())) {
 				return Constants.PASS;
