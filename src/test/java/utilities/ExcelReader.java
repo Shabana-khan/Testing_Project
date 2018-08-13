@@ -11,7 +11,6 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class ExcelReader {
 
 	private FileInputStream fis;
-	private String filepath;
 	private XSSFWorkbook workbook;
 	private XSSFSheet sheet;
 	private XSSFRow row;
@@ -19,7 +18,6 @@ public class ExcelReader {
 
 	public ExcelReader(String filepath) {
 
-		this.filepath = filepath;
 		try {
 			fis = new FileInputStream(filepath);
 			workbook = new XSSFWorkbook(fis);

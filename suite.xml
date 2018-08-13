@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="eBayTestSuite" parallel="tests" thread-count="2">
+	<test name="chromeTest">
+		<classes>
+			<class name="testRunner.FirefoxRunner"></class>
+		</classes>
+	</test>
+	<test name="firefoxTest">
+		<classes>
+			<class name="testRunner.FirefoxRunner"></class>
+		</classes>
+	</test>
+</suite>

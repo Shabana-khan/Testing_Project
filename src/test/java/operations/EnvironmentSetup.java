@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
 import utilities.PathUtility;
@@ -29,8 +30,10 @@ public class EnvironmentSetup {
 			break;
 
 		case "firefox":
+			FirefoxOptions options = new FirefoxOptions();
+			options.setCapability("marionette", false);
 			System.setProperty("webdriver.gecko.driver", PathUtility.FIREFOX_DRIVER_PATH);
-			DRIVER = new FirefoxDriver();
+			DRIVER = new FirefoxDriver(options);
 			openWebPage(url);
 			break;
 		}

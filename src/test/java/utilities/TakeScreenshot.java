@@ -8,21 +8,35 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TakeScreenshot {
 
-	public static void captureScreenshot(WebDriver driver, String filename) {
+	public static boolean captureScreenshot(WebDriver driver, String filename) {
 		File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		File desiredFile = new File("./src/test/resources/screenshots/" + filename + ".jpg");
+		File desiredFile;
+
 		// System.out.println(desiredFile);
 		try {
-			Files.deleteIfExists(desiredFile.toPath());
-			// System.out.println(Files.deleteIfExists(desiredFile.toPath()));
-			FileUtils.copyFile(screenshot, new File("./src/test/resources/screenshots/" + filename + ".jpg"));
+			if (driver instanceof FirefoxDriver) {
+				desiredFile = new File("./test-output/screenshots/Firefox/" + filename + ".jpg");
+				Files.deleteIfExists(desiredFile.toPath());
+				// System.out.println(Files.deleteIfExists(desiredFile.toPath()));
+				FileUtils.copyFile(screenshot, new File("./test-output/screenshots/Firefox/" + filename + ".jpg"));
+			} else if (driver instanceof ChromeDriver) {
+				desiredFile = new File("./test-output/screenshots/Chrome/" + filename + ".jpg");
+				Files.deleteIfExists(desiredFile.toPath());
+				// System.out.println(Files.deleteIfExists(desiredFile.toPath()));
+				FileUtils.copyFile(screenshot, new File("./test-output/screenshots/Chrome/" + filename + ".jpg"));
+			}
+
+			return true;
 
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			return false;
 		}
 	}
 }
