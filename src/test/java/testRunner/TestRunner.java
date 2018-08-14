@@ -7,7 +7,8 @@ import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(features = "src/test/resources/features", glue = { "stepDefinitions" }, plugin = {
-		"json:target/cucumber-json/ebay-reports" }, dryRun = false, monochrome = true, tags = {
+		"json:target/cucumber-json/ebay-reports",
+		"html:target/cucumber-html/ebay-reports" }, dryRun = false, monochrome = true, tags = {
 				"@chromeScenario,@firefoxScenario" })
 public class TestRunner {
 

@@ -1,0 +1,155 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 4,
+        "name": "Verify the selected products in shopping cart in chrome",
+        "description": "",
+        "id": "adding-products-to-the-shopping-cart;verify-the-selected-products-in-shopping-cart-in-chrome",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 21210140050,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Open the \"chrome\" and launch the application \"ebay\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"chrome\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"ebay\"",
+                  "offset": 45
+                }
+              ],
+              "location": "Steps.open_the_and_launch_the_application(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 54283188009,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "Run the test cases from \"Chrome_EbayTest\" sheet in \"ebayTestData\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Chrome_EbayTest\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"ebayTestData\"",
+                  "offset": 51
+                }
+              ],
+              "location": "Steps.run_the_test_cases_from_sheet_in(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 542842481,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Close the browser",
+            "match": {
+              "location": "Steps.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@chromeScenario"
+          }
+        ]
+      },
+      {
+        "line": 13,
+        "name": "Verify the selected products in shopping cart in firefox",
+        "description": "",
+        "id": "adding-products-to-the-shopping-cart;verify-the-selected-products-in-shopping-cart-in-firefox",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 53082625671,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "Open the \"firefox\" and launch the application \"ebay\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"firefox\"",
+                  "offset": 9
+                },
+                {
+                  "val": "\"ebay\"",
+                  "offset": 46
+                }
+              ],
+              "location": "Steps.open_the_and_launch_the_application(String,String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 134866646283,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Run the test cases from \"Firefox_EbayTest\" sheet in \"ebayTestData\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Firefox_EbayTest\"",
+                  "offset": 24
+                },
+                {
+                  "val": "\"ebayTestData\"",
+                  "offset": 52
+                }
+              ],
+              "location": "Steps.run_the_test_cases_from_sheet_in(String,String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 38838547,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Close the browser",
+            "match": {
+              "location": "Steps.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@firefoxScenario"
+          }
+        ]
+      }
+    ],
+    "name": "Adding products to the shopping cart",
+    "description": "",
+    "id": "adding-products-to-the-shopping-cart",
+    "keyword": "Feature",
+    "uri": "src/test/resources/features/Test.feature",
+    "tags": []
+  }
+]
