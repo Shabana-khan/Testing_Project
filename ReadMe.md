@@ -1,11 +1,11 @@
-## Test and verify addition of any two products to the EBAY shopping cart in Chrome and Firefox
+# Test and verify addition of any two products to the EBAY shopping cart in Chrome and Firefox
 
-# Test Aim - 
+## Test Aim - 
 
 1. To search for a any two products and adding to the cart.
 2. To verify if the selected products are present in the cart
 
-# Test Frameworks - 
+## Test Frameworks - 
 
 Selenium with Cucumber(BDD)framework
 
@@ -19,13 +19,13 @@ Selenium with Cucumber(BDD)framework
 	- Step definitions to call basic test functions
 	- Test runner to invoke multiple test scenarios
 
-# Test Scenarios - 
+## Test Scenarios - 
 
 1. Two separate scenarios to open the URL in Chrome and Firefox respectively
 2. Run the test steps from the excel data sheet
 3. Close the browser
 
-# Test Data - 
+## Test Data - 
 
 The user can input data in the excel sheet in below format:
 
@@ -50,10 +50,10 @@ The user can input data in the excel sheet in below format:
 
 The browser name, URL, excel sheet name and file name are passed in cucumber feature files.
 
-# Test Output
+## Test Output
 The test result is saved inside directory mentioned in the Cucumber runner file.
 
-# Project Structure
+## Project Structure
 1. **src/test/java** - Contains common functionalities like Driver initialisation, Actual implementation of actions specified in the excel sheet, Generating elements based on different locators,  Excel file reader, snapshot functions, other utilities, cucumber step definitions and test runners.  
 2. **src/test/resources** - Contains browser drivers,, Object repository, Cucumber feature files
 3. **test-output** - Stores test snapshots
